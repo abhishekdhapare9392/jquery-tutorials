@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Exchange Rate</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="section bg-primary py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 m-auto text-white text-center">
+            <h1><i class="fas fa-coins"></i> Currency Exchange Rate</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 alert-msg"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card card-body shadow border-0 text-center">
+              <h4>Select From Currency</h4>
+              <select
+                name="currency_one"
+                id="currency-one"
+                class="form-control"
+              >
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card card-body shadow border-0 text-center">
+              <h4>Select To Currency</h4>
+              <select
+                name="currency_two"
+                id="currency-two"
+                class="form-control"
+              >
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 m-auto text-center my-5">
+            <button type="button" class="btn btn-primary btn-lg" id="convert">
+              Convert!
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 m-auto text-center my-5">
+            <label id="compare-rate"></label> <br />
+            <label id="exchanged-currency-rate"></label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

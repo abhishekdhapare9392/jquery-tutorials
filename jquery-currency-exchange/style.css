@@ -1,0 +1,13 @@
+@import url('https://bootswatch.com/5/sandstone/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+#exchanged-currency-rate {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#compare-rate {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--bs-success);
+}

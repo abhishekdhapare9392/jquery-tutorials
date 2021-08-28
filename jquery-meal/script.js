@@ -43,6 +43,24 @@ $(document).ready(function () {
       success: function (data) {
         console.log(data)
         let meal = data.meals[0]
+        let ingredients = ''
+        let m
+        for (m = 1; m <= 20; m++) {
+          if (
+            meal[`strIngredient${m}`] === null ||
+            meal[`strIngredient${m}`] === ''
+          ) {
+            continue
+          } else {
+            ingredients +=
+              '<span class="badge bg-warning mx-1 my-1 p-1">' +
+              meal[`strIngredient${m}`] +
+              ': ' +
+              meal[`strMeasure${m}`] +
+              '</span>'
+          }
+        }
+
         $('.allModels').html(
           `
             <div class="modal fade" id="mealModal" tabindex="-1" aria-labelledby="mealModalLabel" aria-hidden="true">
@@ -60,7 +78,10 @@ $(document).ready(function () {
                         <img class="w-100 h-auto" src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
                     </div>
                     <div class="col-md-8">
-                        <p>${meal.strInstructions}</p>
+                    <h3>Instructions</h3>    
+                    <p>${meal.strInstructions}</p>
+                    <h3>Ingredients</h3>
+                        <p>${ingredients}</p>
                     </div>
                   </div>
                 </div>
