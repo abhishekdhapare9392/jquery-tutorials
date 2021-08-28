@@ -1,5 +1,5 @@
-var apiKey = '9556c217159d8c1c863f2be1'
-var currencyAPIKey = '6d2c74e5ecd8f7fc4be7'
+var apiKey = '<your-api-key>'
+var currencyAPIKey = '<your-api-key>'
 
 $(document).ready(function () {
   $.ajax({
